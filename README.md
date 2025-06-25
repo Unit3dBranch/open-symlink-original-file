@@ -9,8 +9,13 @@
 ## ✨ Features
 
 - ✅ Detects when you're working with a symlinked file
-- 🖱️ Adds **"Open the Original File"** to the navigation bar (editor & explorer)
-- 🚀 Opens the resolved, original file in a new editor tab
+- 🔎 Supports reverse lookup: find symlinks pointing to an original file
+- 🖱️ Context menu options:
+  - **"Open the Original File"** (when opening a symlink)
+  - **"Find Symlinks to This File"** (when viewing an original file)
+- 📌 Available in both the **editor title bar** and the **right-click context menu**
+- 🈯 Fully localized (English and Portuguese PT-BR support)
+- 🧪 Includes unit tests and validation
 - ⚙️ Zero dependencies — pure Node.js and VS Code APIs
 
 ---
@@ -31,10 +36,15 @@ code --install-extension open-symlink-original-file.vsix
 
 ## 🧠 Usage
 
-1. Open a symlinked file in VS Code
-2. Right-click inside the editor or on the file in the explorer
-3. Select **“Open the Original File”**
-4. The original file will open in a new tab
+1. **To open the original file of a symlink:**
+   - Right-click inside a symlinked file or on it in the file explorer
+   - Select **“Open the Original File”**
+   - The original file will open in a new tab
+
+2. **To find symlinks pointing to a file:**
+   - Right-click on the original file (non-symlink)
+   - Select **“Find Symlinks to This File”**
+   - Choose from a list of matching symlinks to open
 
 ---
 
@@ -59,14 +69,17 @@ Opening `index-link.js` and clicking on navigation menu option will let you jump
 
 ## 🧪 Known Limitations
 
-- Does not follow links to directories (currently file-based only)
-- Menu only appears for symlinks with accessible targets
+- Does not follow links to directories (file-based only)
+- Reverse search scans the workspace recursively, so performance may vary in large projects
+- Menu options appear contextually based on whether the selected file is a symlink or not
 
 ---
 
 ## 🤝 Contributing
 
 Feel free to fork, improve, and submit PRs! Bug reports and feature ideas are welcome.
+
+👉 [Contribute on GitHub](https://github.com/Unit3dBranch/open-symlink-original-file)
 
 ---
 
