@@ -1,9 +1,11 @@
 const vscode = require('vscode'),
-    fs = require('fs');
+	fs = require('fs'),
+	nls = require('vscode-nls'),
+	localize = nls.loadMessageBundle();
 
 module.exports = async function openOriginalFile(uri) {
 	if (!uri) {
-		vscode.window.showErrorMessage('No file selected.');
+		vscode.window.showErrorMessage(localize('error.noFileSelected', 'No file selected.'));
 		return;
 	}
 
@@ -12,6 +14,8 @@ module.exports = async function openOriginalFile(uri) {
 		const doc = await vscode.workspace.openTextDocument(originalPath);
 		await vscode.window.showTextDocument(doc);
 	} catch (error) {
-		vscode.window.showErrorMessage(`Could not open original file: ${error.message}`);
+		vscode.window.showErrorMessage(
+			localize('error.openOriginalFailed', 'Could not open original file: {0}', error.message)
+		);
 	}
 };

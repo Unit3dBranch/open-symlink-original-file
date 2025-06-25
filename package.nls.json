@@ -1,0 +1,12 @@
+{
+    "noFileSelected": "No file selected.",
+	"error.noFileSelected": "No file selected.",
+	"error.noWorkspace": "No workspace open.",
+	"info.noSymlinksFound": "No symlinks found for this file.",
+	"prompt.selectSymlink": "Select a symlink to open",
+    "ext.displayName": "Open Symlink Original File",
+    "ext.description": "An extension able to track the original file from the symlink and provide an option to open the original file directly from the navigation menu.",
+    "ext.category.other": "Other",
+    "command.openOriginalFile.title": "Open the Original File",
+    "command.openSymlinksToOriginal.title": "Find Symlinks to This File"
+}

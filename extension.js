@@ -1,7 +1,11 @@
 const vscode = require('vscode'),
 	fs = require('fs'),
 	openOriginalFile = require('./commands/openOriginalFile'),
-	openSymlinksToOriginal = require('./commands/openSymlinksToOriginal');
+	openSymlinksToOriginal = require('./commands/openSymlinksToOriginal'),
+	nls = require('vscode-nls'),
+	localize = nls.loadMessageBundle();
+
+vscode.window.showErrorMessage(localize('noFileSelected', 'No file selected.'));
 
 function isSymlink(filePath) {
 	try {
