@@ -51,6 +51,18 @@
           "when": "!isSymlinkFile",
           "group": "navigation"
         }
+      ],
+      "editor/context": [
+        {
+          "command": "extension.openOriginalFile",
+          "when": "isSymlinkFile",
+          "group": "navigation"
+        },
+        {
+          "command": "extension.openSymlinksToOriginal",
+          "when": "!isSymlinkFile",
+          "group": "navigation"
+        }
       ]
     }
   },
