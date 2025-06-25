@@ -22,14 +22,13 @@
 
 ## 📦 Installation
 
-1. Go to the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/) (once published)
-2. Search for `Open Symlink Original File` by `Unit3dBranch`
-3. Click **Install**
+1. Go to the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Unit3dBranch.open-symlink-original-file)
+2. Click **Install**
 
 Or install manually:
 
 ```bash
-code --install-extension open-symlink-original-file.vsix
+code --install-extension Unit3dBranch.open-symlink-original-file
 ```
 
 ---
