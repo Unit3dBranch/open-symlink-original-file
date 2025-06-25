@@ -14,3 +14,19 @@ This project adheres to [Semantic Versioning](https://semver.org/) and follows t
 - Context menu item in the navigation bar **"Open the Original File"** available for a symbolic link.
 - Automatic detection of symlinked files in the editor.
 - Command to open the original file target directly from the editor or Explorer.
+
+## [1.1.0] - 2025-06-25
+
+### Added
+
+- 🔁 New feature: **Find Symlinks to This File** from a regular file
+- 🌐 Full internationalization support with English and Brazilian Portuguese translations
+- 🧪 Unit tests for symlink traversal logic
+- 📂 Modularized project structure for better maintainability
+- Enabled support for showing commands in the right-click context menu of both the editor and the Explorer
+- **"Open the Original File"** and **"Find Symlinks to This File"** now appear not only in the title bar but also in the contextual right-click menu
+
+### Changed
+
+- Refactored main command logic into separate modules
+- Improved documentation and internal error messages
