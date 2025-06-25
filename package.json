@@ -21,6 +21,10 @@
       {
         "command": "extension.openOriginalFile",
         "title": "Open the Original File"
+      },
+      {
+        "command": "extension.openSymlinksToOriginal",
+        "title": "Find Symlinks to This File"
       }
     ],
     "menus": {
@@ -29,12 +33,22 @@
           "command": "extension.openOriginalFile",
           "when": "isSymlinkFile",
           "group": "navigation"
+        },
+        {
+          "command": "extension.openSymlinksToOriginal",
+          "when": "!isSymlinkFile",
+          "group": "navigation"
         }
       ],
       "editor/title": [
         {
           "command": "extension.openOriginalFile",
           "when": "isSymlinkFile",
+          "group": "navigation"
+        },
+        {
+          "command": "extension.openSymlinksToOriginal",
+          "when": "!isSymlinkFile",
           "group": "navigation"
         }
       ]
