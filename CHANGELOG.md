@@ -30,3 +30,9 @@ This project adheres to [Semantic Versioning](https://semver.org/) and follows t
 
 - Refactored main command logic into separate modules
 - Improved documentation and internal error messages
+
+## [1.1.1] - 2025-06-25
+
+### Changed
+
+- Change extension description to include correct marketplace path.
